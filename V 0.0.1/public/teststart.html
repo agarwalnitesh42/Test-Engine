@@ -1,0 +1,15 @@
+<ul ng-hide="resultShow">
+    <!--<li>test called</li>-->
+    <li><p>Q {{questionNumber}}</p></li>
+    <li><p>Q {{question}}</p></li>
+    <li><input type="radio" name="option" ng-click="answered(optionA)">{{optionA}}</li>
+    <li><input type="radio" name="option" ng-click="answered(optionB)">{{optionB}}</li>
+    <li><input type="radio" name="option" ng-click="answered(optionC)">{{optionC}}</li>
+    <li><input type="radio" name="option" ng-click="answered(optionD)">{{optionD}}</li>
+
+    <li><button value="Previous" ng-click="previousQ()">Previous</button><button value="Next" ng-click="nextQ()">Next<button value="Submit" ng-click="submit()">Submit</button></button></li>
+</ul>
+<h3 ng-show="resultShow">test results is : </h3>
+<ul  ng-show="resultShow"  ng-repeat="resultItem in testResult" >
+    <li>{{resultItem.qno}} {{resultItem.res}}</li>
+</ul>

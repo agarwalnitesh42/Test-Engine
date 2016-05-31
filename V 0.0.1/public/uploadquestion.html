@@ -1,0 +1,55 @@
+<table>
+    <tr>
+        <td>Test Name : </td>
+        <td><input type="text" ng-model="testName"/></td>
+    </tr>
+    <tr>
+        <td>question : </td>
+        <td><input type="text" ng-model="question"/></td>
+    </tr>
+    <tr>
+        <td>option A :</td>
+        <td><input type="text" ng-model="optionA"/></td>
+    </tr>
+    <tr>
+        <td>option B :</td>
+        <td><input type="text" ng-model="optionB"/></td>
+    </tr>
+    <tr>
+        <td>option C :</td>
+        <td><input type="text" ng-model="optionC"/></td>
+    </tr>
+    <tr>
+        <td>option D :</td>
+        <td><input type="text" ng-model="optionD"/></td>
+    </tr>
+    <tr>
+        <td>Answer :</td>
+        <td><input type="text" ng-model="answer"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button ng-click="submit()">Add Question</button> <button ng-click="upload()">Upload to Server</button></td>
+    </tr>
+</table>
+<p>{{resultMsg.msg}}</p>
+<table border="1">
+    <tr>
+        <th style="width: 20px">Question Number</th>
+        <th style="width: 300px">Question</th>
+        <th style="width: 200px">option A</th>
+        <th style="width: 200px">option B</th>
+        <th style="width: 200px">option C</th>
+        <th style="width: 200px">option D</th>
+        <th style="width: 20px">Answer</th>
+    </tr>
+    <tr ng-repeat="q in questionListUpload">
+        <td>{{$index+1}}</td>
+        <td>{{q.question}}</td>
+        <td>{{q.optionA}}</td>
+        <td>{{q.optionB}}</td>
+        <td>{{q.optionC}}</td>
+        <td>{{q.optionD}}</td>
+        <td>{{q.answer}}</td>
+    </tr>
+</table>

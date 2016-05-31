@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="controller/mainController.js"></script>
+    <script src="controller/homeController.js"></script>
+    <script src="controller/testController.js"></script>
+    <script src="services/homeFactory.js"></script>
+    <script src="services/testFactory.js"></script>
+    <script src="services/testSubmit.js"></script>
+    <script src="routes/app.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
+</head>
+<body ng-app="myApp">
+<div class="container-fluid"  ng-controller="homeCtrl">
+Welcome User
+<br>
+<label><span>Take Test</span></label>
+    <select name="selectTest" ng-model="selectedTest">
+    <option value="{{test.testName}}"  ng-repeat="test in testList">{{test.testName}}</option>
+    </select>
+<!--
+    <select ng-model="selectedTest" ng-options="test.testName for test in testList">>
+    </select>-->
+
+
+    <a ng-href="#/testStart/{{selectedTest}}">Start Test</a>
+    <ng-view>
+
+    </ng-view>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="controller/mainController.js"></script>
+    <script src="controller/examCreateController.js"></script>
+    <script src="services/examUploadFactory.js"></script>
+    <script src="routes/app.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
+</head>
+<body ng-app="myApp">
+<div class="container-fluid">
+    Welcome User
+    <br>
+
+    <a ng-href="#/uploadquestion">create Test</a>
+    <ng-view>
+
+    </ng-view>
+
+
+</div>
+</body>
+</html>

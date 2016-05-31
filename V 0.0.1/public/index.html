@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>LMS</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles/custom.css">
+
+    <script src="controller/mainController.js"></script>
+    <script src="controller/loginController.js"></script>
+
+
+
+    <script src="services/loginFactory.js"></script>
+
+    <script src="services/testFactory.js"></script>
+
+    <script src="routes/app.js"></script>
+
+</head>
+<body>
+<div class="container-fluid ">
+
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4 home" >
+
+        <a  ng-href="#/login" class="btn btn-success">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a  ng-href="#/signUp" class="btn btn-danger">Register</a>
+        <br><br>
+        <ng-view>
+
+        </ng-view>
+    </div>
+    <div class="col-md-4" ></div>
+
+
+
+</div>
+
+</body>
+</html>
